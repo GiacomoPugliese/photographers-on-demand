@@ -66,7 +66,7 @@ export const Services = () => {
               </div>
 
               <div className="flex flex-col flex-grow justify-between h-full">
-                <CardHeader className="pb-4 flex-grow">
+                <CardHeader className="pb-1 flex-grow">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                       <service.icon className="w-6 h-6 text-accent" />
