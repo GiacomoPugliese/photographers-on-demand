@@ -58,24 +58,24 @@ export const Services = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               <div className="flex flex-col flex-grow justify-between h-full">
-                <CardHeader className="pb-0 flex-grow">
+                <CardHeader className="pb-1 flex-grow">
                   <div className="flex items-center gap-3 mb-1">
                     <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                       <service.icon className="w-6 h-6 text-accent" />
                     </div>
                     <CardTitle className="text-2xl">{service.title}</CardTitle>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-2">{service.description}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-1.5">{service.description}</p>
                 </CardHeader>
 
-                <CardContent className="pt-0 -mt-1 flex flex-col justify-between mt-auto">
-                  <ul className="space-y-1.5 mb-4">
+                <CardContent className="pt-0 flex flex-col justify-between mt-auto">
+                  <ul className="space-y-1 mb-3">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
                         <div className="w-1.5 h-1.5 bg-accent rounded-full" />
