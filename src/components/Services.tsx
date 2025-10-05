@@ -56,16 +56,18 @@ export const Services = () => {
               key={index}
               className="border-0 photo-shadow hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
             >
-              <div className="relative overflow-hidden rounded-t-lg">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-[400px] object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className="relative overflow-hidden rounded-t-lg flex justify-center bg-gray-50">
+                <div className="w-[80%] aspect-[3/4] overflow-hidden rounded-md">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col flex-grow justify-between h-full">
-                <CardHeader className="pb-0">
+                <CardHeader className="pb-1">
                   <div className="flex items-center gap-3 mb-1">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
                       <service.icon className="w-5 h-5 text-accent" />
