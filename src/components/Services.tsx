@@ -1,37 +1,47 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Camera, GraduationCap, Users2 } from "lucide-react";
-import headshotImage from "@/assets/headshot-service.jpg";
-import graduationImage from "@/assets/graduation-service.jpg";
-import eventImage from "@/assets/event-service.jpg";
+import { Camera, Church, ChurchIcon, GraduationCap, Users2 } from "lucide-react";
+import headshotImage from "@/assets/headshot-service.png";
+import graduationImage from "@/assets/graduation-service.png";
+import eventImage from "@/assets/event-service.png";
 
 export const Services = () => {
+  const scrollToBooking = () => {
+    const element = document.getElementById("booking");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const services = [
     {
       title: "Chapel Headshots",
-      description: "Professional headshots for LinkedIn, social media, and professional profiles. Perfect for students and professionals.",
-      icon: Camera,
+      description: "Professional headshots for LinkedIn, social media, and professional profiles.",
+      icon: ChurchIcon,
       image: headshotImage,
-      features: ["Professional studio setup", "Multiple outfit changes", "High-resolution photos", "Quick turnaround"]
+      features: ["Professional studio setup", "Multiple outfit changes", "High-resolution photos", "Quick turnaround"],
+      external: true
     },
     {
       title: "Graduation Photos",
       description: "Capture your special graduation moment with professional photography that you'll treasure forever.",
       icon: GraduationCap,
       image: graduationImage,
-      features: ["Campus locations", "Family group shots", "Individual portraits", "Same-day delivery"]
+      features: ["Campus locations", "Family group shots", "Individual portraits", "Same-day delivery"],
+      external: false
     },
     {
       title: "Event Photography",
       description: "Complete event coverage for clubs, Greek life, parties, and campus organizations.",
       icon: Users2,
       image: eventImage,
-      features: ["Full event coverage", "Candid & posed shots", "Group photography", "Digital gallery delivery"]
+      features: ["Full event coverage", "Candid & posed shots", "Group photography", "Digital gallery delivery"],
+      external: false
     }
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="services" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Photography Services</h2>
@@ -47,7 +57,7 @@ export const Services = () => {
                 <img 
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -74,9 +84,29 @@ export const Services = () => {
                   ))}
                 </ul>
                 
-                <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-white transition-colors">
-                  Learn More
-                </Button>
+                {service.external ? (
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-accent group-hover:text-white transition-colors"
+                    asChild
+                  >
+                    <a 
+                      href="https://booking.appointy.com/en-US/enterpriseentertainm/bookings/calendar?sr=1111351"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book Now
+                    </a>
+                  </Button>
+                ) : (
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-accent group-hover:text-white transition-colors"
+                    onClick={scrollToBooking}
+                  >
+                    Book Now
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

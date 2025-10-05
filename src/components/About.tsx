@@ -1,3 +1,4 @@
+// About.tsx
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Calendar, Camera } from "lucide-react";
@@ -29,21 +30,28 @@ export const About = () => {
     "Get your high-quality photos delivered digitally"
   ];
 
+  const scrollToBooking = () => {
+    const element = document.getElementById('booking');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="py-24 bg-muted/50">
+    <section className="py-20 bg-muted/50">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - About Content */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Professional Photography, 
+              Quality Photography, 
               <span className="text-accent block">Made Simple</span>
             </h2>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              We bridge the gap between talented photographers and campus organizations. 
+              We connect talented photographers and campus organizations. 
               Our platform makes it easy to book professional photography for any event, 
-              from intimate headshot sessions to large-scale campus celebrations.
+              from 1-on-1 headshot sessions to large-scale campus celebrations.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -60,9 +68,6 @@ export const About = () => {
               ))}
             </div>
 
-            <Button size="lg" variant="default">
-              Learn More About Us
-            </Button>
           </div>
 
           {/* Right Column - How It Works */}
@@ -79,7 +84,7 @@ export const About = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <p className="text-foreground">{step}</p>
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
+ 
                       </div>
                     </div>
                   ))}
@@ -90,7 +95,7 @@ export const About = () => {
                   <p className="text-muted-foreground mb-4">
                     Join hundreds of satisfied campus organizations
                   </p>
-                  <Button variant="hero" size="lg" className="w-full">
+                  <Button variant="hero" size="lg" className="w-full" onClick={scrollToBooking}>
                     Book Your Photographer
                   </Button>
                 </div>

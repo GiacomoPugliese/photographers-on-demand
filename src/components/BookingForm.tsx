@@ -1,3 +1,5 @@
+// BookingForm.tsx
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -32,24 +34,17 @@ export const BookingForm = () => {
   };
 
   return (
-    <section id="booking" className="py-24 bg-background">
+    <section id="booking" className="pt-12 pb-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Reserve Your Photographer</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Reserve Your Event Photographer</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Fill out the form below and we'll match you with the perfect photographer for your event
+            Fill out the form below and we'll match you with the perfect photographer for your event (see above for chapel headshot signups)
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="photo-shadow border-0">
-            <CardHeader className="text-center pb-8">
-              <CardTitle className="text-3xl">Book Your Session</CardTitle>
-              <p className="text-muted-foreground">
-                We'll respond within 24 hours with photographer availability and next steps
-              </p>
-            </CardHeader>
-            
+          <Card className="photo-shadow border-0">      
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Personal Information */}

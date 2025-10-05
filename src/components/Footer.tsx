@@ -1,4 +1,4 @@
-import { Camera, Mail, Phone, Instagram, Facebook } from "lucide-react";
+import { Camera, Mail, Phone, Instagram, Globe } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -33,11 +33,21 @@ export const Footer = () => {
             <div className="space-y-2 text-primary-foreground/80">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>book@photographersondemand.com</span>
+                <a
+                  href="mailto:book@photographersondemand.com"
+                  className="hover:text-accent transition-colors"
+                >
+                  book@photographersondemand.com
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>(555) 123-4567</span>
+                <a
+                  href="tel:1234567890"
+                  className="hover:text-accent transition-colors"
+                >
+                  (123) 456-7890
+                </a>
               </div>
             </div>
           </div>
@@ -46,18 +56,31 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Follow Us</h3>
             <div className="flex gap-4">
-              <Instagram className="w-6 h-6 text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer" />
-              <Facebook className="w-6 h-6 text-primary-foreground/80 hover:text-accent transition-colors cursor-pointer" />
-            </div>
-            <div className="space-y-2 text-sm text-primary-foreground/60">
-              <p>Privacy Policy</p>
-              <p>Terms of Service</p>
+              <a
+                href="https://www.instagram.com/enterprise.entertainment/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+                aria-label="Visit our Instagram page"
+              >
+                <Instagram className="w-6 h-6 cursor-pointer" />
+              </a>
+
+              <a
+                href="https://www.campus-enterprises.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors"
+                aria-label="Visit our website"
+              >
+                <Globe className="w-6 h-6 cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-          <p>&copy; 2024 Photographers on Demand. All rights reserved.</p>
+          <p>&copy; 2025 Photographers on Demand. All rights reserved.</p>
         </div>
       </div>
     </footer>

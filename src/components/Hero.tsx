@@ -4,17 +4,17 @@ import heroImage from "@/assets/hero-photography.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <img
           src={heroImage}
           alt="Professional photographer capturing university event"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 hero-gradient opacity-75"></div>
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto">
@@ -22,46 +22,66 @@ export const Hero = () => {
             Photographers
             <span className="block text-accent">On Demand</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Professional photography services for clubs, Greek life, and campus organizations. 
+
+          <p className="text-lg md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            Professional photography services for clubs, Greek life, and campus organizations.
             Book your photographer today.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="xl" variant="hero" className="group">
-              <Camera className="w-5 h-5 group-hover:rotate-6 transition-transform" />
-              Book Your Session
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 items-center">
+            <Button
+              size="xl"
+              variant="hero"
+              className="w-1/2 sm:w-56 justify-center shrink-0"
+              onClick={() => {
+                const el = document.getElementById("services");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Explore Our Services
             </Button>
-            <Button size="xl" variant="professional">
-              View Our Work
+
+            <Button
+              size="xl"
+              variant="professional"
+              asChild
+              className="w-1/2 sm:w-56 justify-center shrink-0 transition-colors duration-300 hover:bg-gray-300 hover:text-black"
+            >
+              <a
+                href="https://www.instagram.com/enterprise.entertainment/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Our Work
+              </a>
             </Button>
           </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+
+          {/* Stats - Visible only on desktop */}
+          <div className="hidden md:grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3">
                 <Camera className="w-8 h-8 text-accent" />
               </div>
-              <div className="text-2xl font-bold">50+</div>
-              <div className="text-white/80">Professional Photographers</div>
+              <div className="text-4xl font-bold">50+</div>
+              <div className="text-white/100">Professional Photographers</div>
             </div>
-            
+
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3">
                 <Users className="w-8 h-8 text-accent" />
               </div>
-              <div className="text-2xl font-bold">200+</div>
-              <div className="text-white/80">Events Captured</div>
+              <div className="text-4xl font-bold">200+</div>
+              <div className="text-white/100">Events Captured</div>
             </div>
-            
+
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3">
                 <CalendarCheck className="w-8 h-8 text-accent" />
               </div>
-              <div className="text-2xl font-bold">24hr</div>
-              <div className="text-white/80">Booking Response</div>
+              <div className="text-4xl font-bold">24hr</div>
+              <div className="text-white/100">Booking Response</div>
             </div>
           </div>
         </div>

@@ -130,3 +130,7 @@ All colors MUST be HSL. Focus on clean, photo-friendly aesthetics.
     background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
