@@ -23,7 +23,7 @@ export const Hero = () => {
             <span className="block text-accent">On Demand</span>
           </h1>
 
-          <p className="text-base md:text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl mb-8 text-white/110 max-w-2xl mx-auto leading-relaxed">
             Professional photography services for clubs, Greek life, and campus organizations.
             Book your photographer today.
           </p>
