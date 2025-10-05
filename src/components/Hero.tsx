@@ -18,12 +18,12 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Photographers
             <span className="block text-accent">On Demand</span>
           </h1>
 
-          <p className="text-lg md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
             Professional photography services for clubs, Greek life, and campus organizations.
             Book your photographer today.
           </p>
@@ -39,7 +39,7 @@ export const Hero = () => {
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Explore Our Services
+              Explore Services
             </Button>
 
             <Button
