@@ -1,3 +1,5 @@
+// Services.tsx
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChurchIcon, GraduationCap, Users2 } from "lucide-react";
@@ -39,16 +41,16 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-muted/30">
+    <section id="services" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Photography Services</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold mb-5">Our Photography Services</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Professional photography services tailored for the university community
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -58,23 +60,22 @@ export const Services = () => {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-[400px] object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               <div className="flex flex-col flex-grow justify-between h-full">
-                <CardHeader className="pb-1 flex-grow">
+                <CardHeader className="pb-0">
                   <div className="flex items-center gap-3 mb-1">
-                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                      <service.icon className="w-6 h-6 text-accent" />
+                    <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-accent" />
                     </div>
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-1.5">{service.description}</p>
+                  <p className="text-muted-foreground leading-relaxed text-sm mb-2">{service.description}</p>
                 </CardHeader>
 
-                <CardContent className="pt-0 flex flex-col justify-between mt-auto">
+                <CardContent className="pt-0 mt-auto">
                   <ul className="space-y-1 mb-3">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
@@ -87,7 +88,7 @@ export const Services = () => {
                   {service.external ? (
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-accent group-hover:text-white transition-colors mt-auto"
+                      className="w-full group-hover:bg-accent group-hover:text-white transition-colors"
                       asChild
                     >
                       <a
@@ -101,7 +102,7 @@ export const Services = () => {
                   ) : (
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-accent group-hover:text-white transition-colors mt-auto"
+                      className="w-full group-hover:bg-accent group-hover:text-white transition-colors"
                       onClick={scrollToBooking}
                     >
                       Book Now
