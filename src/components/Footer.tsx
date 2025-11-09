@@ -1,4 +1,6 @@
-import { Camera, Mail, Phone, Instagram, Globe } from "lucide-react";
+// Footer.tsx
+
+import { Camera, Mail, MapPin, Instagram, Globe, MapIcon } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -34,19 +36,19 @@ export const Footer = () => {
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <a
-                  href="mailto:book@photographersondemand.com"
+                  href="mailto:info@campusenterprises.org"
                   className="hover:text-accent transition-colors"
                 >
-                  book@photographersondemand.com
+                  info@campusenterprises.org
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
+                <MapPin className="w-4 h-4" />
                 <a
-                  href="tel:1234567890"
+
                   className="hover:text-accent transition-colors"
                 >
-                  (123) 456-7890
+                  323 East Chapel Hill Street PO Box 907
                 </a>
               </div>
             </div>

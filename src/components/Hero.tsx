@@ -1,3 +1,5 @@
+// Hero.tsx
+
 import { Button } from "@/components/ui/button";
 import { Camera, Users, CalendarCheck } from "lucide-react";
 import heroImage from "@/assets/hero-photography.jpg";
@@ -59,21 +61,14 @@ export const Hero = () => {
           </div>
 
           {/* Stats - Visible only on desktop */}
-          <div className="hidden md:grid grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3">
-                <Camera className="w-8 h-8 text-accent" />
-              </div>
-              <div className="text-4xl font-bold">50+</div>
-              <div className="text-white/100">Professional Photographers</div>
-            </div>
+          <div className="hidden md:grid grid-cols-2 max-w-xl mx-auto">
 
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-3">
                 <Users className="w-8 h-8 text-accent" />
               </div>
               <div className="text-4xl font-bold">200+</div>
-              <div className="text-white/100">Events Captured</div>
+              <div className="text-white/100">Happy Customers</div>
             </div>
 
             <div className="flex flex-col items-center">
