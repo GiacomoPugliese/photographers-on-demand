@@ -53,7 +53,7 @@ export const BookingForm = () => {
 
     try {
       const url = new URL(
-        "https://script.google.com/macros/s/AKfycbwJLvEfLQTm1p328_tUywlGQuw8rxrcyzGlR1NVBDuaAoiXc4q5vv-1pVOS_OXMjwHfmg/exec"
+        "https://script.google.com/macros/s/AKfycbx43BprdHQagmctw5Qph506l_jFNAxzQTkmhrKLJ_II4-zgGWVZzIASsStNoVPjtYKR/exec"
       );
 
       Object.entries(formData).forEach(([key, value]) => {
